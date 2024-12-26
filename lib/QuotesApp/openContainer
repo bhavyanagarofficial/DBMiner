@@ -1,0 +1,21 @@
+OpenContainer(
+          transitionDuration: Duration(milliseconds: 500),
+          openBuilder: (context, _) => Image.asset('assets/images/check.jpeg'),
+          closedElevation: 0,
+          closedShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          closedColor: Theme.of(context).cardColor,
+          closedBuilder: (context, openContainer) => Card(
+            color: Colors.blue.shade100,
+            child: ListTile(
+              leading: Icon(Icons.open_in_browser),
+              title: Text(
+                'Home',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: openContainer,
+            ),
+          ),
+        ),
